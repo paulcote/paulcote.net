@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Paul Côté - Personal Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2d3748", // Charcoal
+                        "secondary": "#718096", // Slate
+                        "accent": "#4a5568",
+                        "background-light": "#ffffff",
+                        "background-dark": "#1a202c",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                    },
+                },
+            },
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #1a202c;
+        }
+
+        .masonry-grid {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            gap: 0.5rem;
+        }
+
+        .masonry-item {
+            break-inside: avoid;
+            flex-basis: calc(50% - 0.25rem);
+        }
+
+        @media (min-width: 640px) {
+            .masonry-grid {
+                gap: 1.5rem;
+            }
+            .masonry-item {
+                flex-basis: calc(50% - 0.75rem);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .masonry-grid {
+                gap: 1.5rem;
+            }
+            .masonry-item {
+                flex-basis: calc(25% - 1.25rem);
+            }
+        }
+
+        div.anchor {
+            display: block;
+            position: relative;
+            top: -120px;
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body class="font-display antialiased">
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="font-serif font-semibold text-2xl tracking-tight text-gray-900">Paul Côté</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-12">
+                        <a class="text-gray-500 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors"
+                            href="#hello">Hello !</a>
+                        <a class="text-gray-500 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors"
+                            href="#photography">Photography</a>
+                        <!-- <a class="text-gray-500 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors"
+                            href="#videography">Videography</a> -->
+                        <a class="text-gray-500 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors"
+                            href="fr.html">FR</a>
+                        <a class="text-gray-900 border border-gray-900 px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-900 hover:text-white transition-all"
+                            href="#socials">Contact</a>
+                    </div>
+                </div>
+                <!-- <div class="md:hidden">
+                    <button class="text-gray-400 hover:text-gray-900">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div> -->
+            </div>
+        </div>
+    </nav>
+    <main class="pt-32 pb-20">
+        <div class="anchor" id="hello"></div>
+        <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-24">
+            <div class="relative w-40 h-40 mx-auto mb-8">
+                <div class="absolute inset-0 rounded-full border border-gray-200 scale-110"></div>
+                <img alt="Paul Côté picture" class="w-full h-full object-cover rounded-full shadow-lg"
+                    src="./img/profile2026.jpg" />
+            </div>
+            <h1 class="text-5xl sm:text-6xl font-serif font-medium text-gray-900 mb-4 tracking-tight">
+                Paul Côté
+            </h1>
+            <h2 class="text-xl sm:text-2xl text-gray-500 font-light mb-12">
+                Senior Web Programmer &amp; CTO at <a href="https://bizzmedia.ca" target="_blank"
+                    class="font-medium text-gray-800 hover:underline">BIZZ Media</a>
+            </h2>
+            <div class="max-w-2xl mx-auto space-y-6 text-gray-600 leading-relaxed text-lg font-light">
+                <p>
+                    I specialize in architecting robust applications using <span
+                        class="text-gray-900 font-medium">JavaScript, Node.js, PHP,</span> and <span
+                        class="text-gray-900 font-medium">Laravel</span>. When I'm not coding the future, I'm capturing
+                    it through my lens—exploring the intersection of technology and <span
+                        class="text-gray-900 font-medium">visual storytelling</span>.
+                </p>
+                <p> Je parle aussi <a class="font-medium text-gray-800 hover:underline" href="fr.html">français</a> !</p>
+            </div>
+            <div class="anchor" id="socials"></div>
+            <div class="flex justify-center gap-6 mt-10">
+                <a class="text-gray-400 hover:text-gray-900 transition-colors"
+                    href="https://www.linkedin.com/in/paulcoteweb/" target="_blank">
+                    <span class="sr-only">LinkedIn</span>
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                        </path>
+                    </svg>
+                </a>
+                <a class="text-gray-400 hover:text-gray-900 transition-colors" href="https://github.com/paulcote"
+                    target="_blank">
+                    <span class="sr-only">GitHub</span>
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+                        </path>
+                    </svg>
+                </a>
+                <a class="text-gray-400 hover:text-gray-900 transition-colors" href="https://www.instagram.com/paul_at_world" target="_blank">
+                    <span class="sr-only">Instagram</span>
+                    <svg fill="currentColor" width="28" height="28" viewBox="0 0 32 32">
+                        <style>
+                            .st0 {
+                                fill: #fff
+                            }
+                        </style>
+                        <path d="M6 2h20a4 4 0 0 1 4 4v20a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z" />
+                        <path
+                            d="M21.3 9.7c-.6 0-1.2.5-1.2 1.2s.5 1.2 1.2 1.2 1.2-.5 1.2-1.2c-.1-.7-.6-1.2-1.2-1.2zM16 11.2a5 5 0 1 0 4.9 4.9 4.8 4.8 0 0 0-4.9-4.9zm0 8.1a3.2 3.2 0 0 1-3.2-3.2c0-1.7 1.4-3.2 3.2-3.2 1.7 0 3.2 1.4 3.2 3.2 0 1.8-1.4 3.2-3.2 3.2z"
+                            class="st0" />
+                        <path
+                            d="M20 6h-8a6 6 0 0 0-6 6v8a6 6 0 0 0 6 6h8a6 6 0 0 0 6-6v-8a6 6 0 0 0-6-6zm4.1 14c0 2.3-1.9 4.1-4.1 4.1h-8A4.1 4.1 0 0 1 7.9 20v-8c0-2.3 1.9-4.1 4.1-4.1h8c2.3 0 4.1 1.9 4.1 4.1v8z"
+                            class="st0" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+        <div class="anchor" id="photography"></div>
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
+            <div class="flex items-center justify-between mb-12">
+                <h3 class="text-sm uppercase tracking-widest text-gray-500 font-semibold">Curated Photography</h3>
+                <div class="h-px bg-gray-200 flex-grow ml-6"></div>
+            </div>
+            <div class="mb-16">
+                <h4 class="text-2xl font-serif text-gray-900 mb-8">Sports</h4>
+                <div class="masonry-grid">
+                    <div class="masonry-item group relative cursor-pointer">
+                        <a href="./img/photos/sports/full1.jpg" class="glightbox overflow-hidden rounded-sm bg-gray-100">
+                            <img alt="Sports Photo 1"
+                                class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105 group-hover:opacity-90 grayscale hover:grayscale-0"
+                                src="./img/photos/sports/thumb1.jpg" />
+                        </a>
+                    </div>
+                    <div class="masonry-item group relative cursor-pointer">
+                        <a href="./img/photos/sports/full2.jpg" class="glightbox overflow-hidden rounded-sm bg-gray-100">
+                            <img alt="Sports Photo 2"
+                                class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105 group-hover:opacity-90 grayscale hover:grayscale-0"
+                                src="./img/photos/sports/thumb2.jpg" />
+                        </a>
+                    </div>
+                    <div class="masonry-item group relative cursor-pointer">
+                        <a href="./img/photos/sports/full3.jpg" class="glightbox overflow-hidden rounded-sm bg-gray-100">
+                            <img alt="Sports Photo 3"
+                                class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105 group-hover:opacity-90 grayscale hover:grayscale-0"
+                                src="./img/photos/sports/thumb3.jpg" />
+                        </a>
+                    </div>
+                    <div class="masonry-item group relative cursor-pointer">
+                        <a href="./img/photos/sports/full4.jpg" class="glightbox overflow-hidden rounded-sm bg-gray-100">
+                            <img alt="Sports Photo 4"
+                                class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105 group-hover:opacity-90 grayscale hover:grayscale-0"
+                                src="./img/photos/sports/thumb4.jpg" />
+                        </a>
+                    </div>
+                    <div class="masonry-item group relative cursor-pointer">
+                        <a href="./img/photos/sports/full5.jpg" class="glightbox overflow-hidden rounded-sm bg-gray-100">
+                            <img alt="Sports Photo 5"
+                                class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105 group-hover:opacity-90 grayscale hover:grayscale-0"
+                                src="./img/photos/sports/thumb5.jpg" />
+                        </a>
+                    </div>
+                    <div class="masonry-item group relative cursor-pointer">
+                        <a href="./img/photos/sports/full6.jpg" class="glightbox overflow-hidden rounded-sm bg-gray-100">
+                            <img alt="Sports Photo 6"
+                                class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105 group-hover:opacity-90 grayscale hover:grayscale-0"
+                                src="./img/photos/sports/thumb6.jpg" />
+                        </a>
+                    </div>
+                    <div class="masonry-item group relative cursor-pointer">
+                        <a href="./img/photos/sports/full7.jpg" class="glightbox overflow-hidden rounded-sm bg-gray-100">
+                            <img alt="Sports Photo 7"
+                                class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105 group-hover:opacity-90 grayscale hover:grayscale-0"
+                                src="./img/photos/sports/thumb7.jpg" />
+                        </a>
+                    </div>
+                    <div class="masonry-item group relative cursor-pointer">
+                        <a href="./img/photos/sports/full8.jpg" class="glightbox overflow-hidden rounded-sm bg-gray-100">
+                            <img alt="Sports Photo 8"
+                                class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105 group-hover:opacity-90 grayscale hover:grayscale-0"
+                                src="./img/photos/sports/thumb8.jpg" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-2xl font-serif text-gray-900 mb-8">Travel</h4>
+                <div class="masonry-grid">
+                    <div class="masonry-item group relative cursor-pointer">
+                        <a href="./img/photos/travel/full1.jpg" class="glightbox overflow-hidden rounded-sm bg-gray-100">
+                            <img alt="Travel Photo 1"
+                                class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105 group-hover:opacity-90 grayscale hover:grayscale-0"
+                                src="./img/photos/travel/thumb1.jpg" />
+                        </a>
+                    </div>
+                    <div class="masonry-item group relative cursor-pointer">
+                        <a href="./img/photos/travel/full2.jpg" class="glightbox overflow-hidden rounded-sm bg-gray-100">
+                            <img alt="Travel Photo 2"
+                                class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105 group-hover:opacity-90 grayscale hover:grayscale-0"
+                                src="./img/photos/travel/thumb2.jpg" />
+                        </a>
+                    </div>
+                    <div class="masonry-item group relative cursor-pointer">
+                        <a href="./img/photos/travel/full3.jpg" class="glightbox overflow-hidden rounded-sm bg-gray-100">
+                            <img alt="Travel Photo 3"
+                                class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105 group-hover:opacity-90 grayscale hover:grayscale-0"
+                                src="./img/photos/travel/thumb3.jpg" />
+                        </a>
+                    </div>
+                    <div class="masonry-item group relative cursor-pointer">
+                        <a href="./img/photos/travel/full4.jpg" class="glightbox overflow-hidden rounded-sm bg-gray-100">
+                            <img alt="Travel Photo 4"
+                                class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105 group-hover:opacity-90 grayscale hover:grayscale-0"
+                                src="./img/photos/travel/thumb4.jpg" />
+                        </a>
+                    </div>
+                    <div class="masonry-item group relative cursor-pointer">
+                        <a href="./img/photos/travel/full5.jpg" class="glightbox overflow-hidden rounded-sm bg-gray-100">
+                            <img alt="Travel Photo 5"
+                                class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105 group-hover:opacity-90 grayscale hover:grayscale-0"
+                                src="./img/photos/travel/thumb5.jpg" />
+                        </a>
+                    </div>
+                    <div class="masonry-item group relative cursor-pointer">
+                        <a href="./img/photos/travel/full6.jpg" class="glightbox overflow-hidden rounded-sm bg-gray-100">
+                            <img alt="Travel Photo 6"
+                                class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105 group-hover:opacity-90 grayscale hover:grayscale-0"
+                                src="./img/photos/travel/thumb6.jpg" />
+                        </a>
+                    </div>
+                    <div class="masonry-item group relative cursor-pointer">
+                        <a href="./img/photos/travel/full7.jpg" class="glightbox overflow-hidden rounded-sm bg-gray-100">
+                            <img alt="Travel Photo 7"
+                                class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105 group-hover:opacity-90 grayscale hover:grayscale-0"
+                                src="./img/photos/travel/thumb7.jpg" />
+                        </a>
+                    </div>
+                    <div class="masonry-item group relative cursor-pointer">
+                        <a href="./img/photos/travel/full8.jpg" class="glightbox overflow-hidden rounded-sm bg-gray-100">
+                            <img alt="Travel Photo 8"
+                                class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105 group-hover:opacity-90 grayscale hover:grayscale-0"
+                                src="./img/photos/travel/thumb8.jpg" />
+                        </a>
+                    </div>
+                    <div class="masonry-item group relative cursor-pointer">
+                        <a href="./img/photos/travel/full9.jpg" class="glightbox overflow-hidden rounded-sm bg-gray-100">
+                            <img alt="Travel Photo 9"
+                                class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105 group-hover:opacity-90 grayscale hover:grayscale-0"
+                                src="./img/photos/travel/thumb9.jpg" />
+                        </a>
+                    </div>
+                    <div class="masonry-item group relative cursor-pointer">
+                        <a href="./img/photos/travel/full10.jpg" class="glightbox overflow-hidden rounded-sm bg-gray-100">
+                            <img alt="Travel Photo 10"
+                                class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105 group-hover:opacity-90 grayscale hover:grayscale-0"
+                                src="./img/photos/travel/thumb10.jpg" />
+                        </a>
+                    </div>
+                    <div class="masonry-item group relative cursor-pointer">
+                        <a href="./img/photos/travel/full11.jpg" class="glightbox overflow-hidden rounded-sm bg-gray-100">
+                            <img alt="Travel Photo 11"
+                                class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105 group-hover:opacity-90 grayscale hover:grayscale-0"
+                                src="./img/photos/travel/thumb11.jpg" />
+                        </a>
+                    </div>
+                    <div class="masonry-item group relative cursor-pointer">
+                        <a href="./img/photos/travel/full12.jpg" class="glightbox overflow-hidden rounded-sm bg-gray-100">
+                            <img alt="Travel Photo 12"
+                                class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105 group-hover:opacity-90 grayscale hover:grayscale-0"
+                                src="./img/photos/travel/thumb12.jpg" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- <div class="anchor" id="videography"></div>
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
+            <div class="flex items-center justify-between mb-12">
+                <h3 class="text-sm uppercase tracking-widest text-gray-500 font-semibold">Videography</h3>
+                <div class="h-px bg-gray-200 flex-grow ml-6"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-sm bg-gray-100 aspect-video mb-4 relative">
+                        <img alt="Documentary Series"
+                            class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIKZsedWJMDcHvCNLI-_Gd9OGRo0PugLp2PvY6ycGImJ57RUjSaZRERZaLp_bODUqULJgc2jcgmNARrQXnccK977zBHlco8NvmWTrMYyoMsodGDRCSh3vyp2cZ0WPJrvn3AxNaJAGsJpZMJ-rr9qkA5Bwd00hnMUY-TZUAnwsDoeHDNEv_lleZYsaOF7Fcp8acBgCqIl2sNf9C8U4njmA-3hi35iM6PNe4uXGK17mh7LVntFJaTHc3i85Za4j6vGhk0JBqq-MSGcQ" />
+                        <div
+                            class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300 flex items-center justify-center">
+                            <span
+                                class="material-symbols-outlined text-white/80 text-4xl group-hover:opacity-0 transition-opacity duration-300">play_circle</span>
+                        </div>
+                    </div>
+                    <h4 class="text-lg font-medium text-gray-900 mb-2 group-hover:text-gray-600 transition-colors">Urban
+                        Rhythm Documentary</h4>
+                    <p class="text-gray-500 font-light text-sm leading-relaxed mb-4">A short film exploring the unseen
+                        patterns of daily city life, capturing the beat of the metropolis.</p>
+                    <div class="grid grid-cols-3 gap-2">
+                        <div class="overflow-hidden rounded-sm bg-gray-100 aspect-square">
+                            <img alt="Urban Detail 1"
+                                class="w-full h-full object-cover grayscale opacity-70 hover:opacity-100 transition-opacity"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbg3ezpseeOZqI2cSqe-c_rImvcIDzGHzKLunGzUfyWpL-vEF-lMA3VI1vccl--vXKGoq_nEAMmWPWW4W9U1whOVURVUUindnKfOK2Oi7PwQvjGJsb6e9-Cxx_Xc7qUX_lh2yIXZ9LFFLJ-PaXe5V5H2pYnI_HTWpISa4YyVLgHvoNl3a-bDiH4NmSPkAa9yS3vugFXPyS8CH_xY6k_GIc_Dv5CR7s7z4i5k2IlmVmV7A0NN-k5rUK_PG29D8Edmley4l597Fya6M" />
+                        </div>
+                        <div class="overflow-hidden rounded-sm bg-gray-100 aspect-square">
+                            <img alt="Urban Detail 2"
+                                class="w-full h-full object-cover grayscale opacity-70 hover:opacity-100 transition-opacity"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUYLNCdH3cSHemi6KGj5wEUSqBD-O9eruOpLmj-GQpZQXaKIA8OGn84LYZHP3czFQ3Brbt2JCJ3zzvhTOyqZ3KuFVkRfPaqONG4znl69mCb-Z8yklbLOfDIgGDZw41U4xvb4YmvMzekdNmmx-X8tELErpaCxs_0GTwNE9ynw5a-LGbH-KIN3XujSraiIRcsQZaiXhc7SjZ_r1QqGrGaQYBvbv_QdA5GTKwzJv66u-Wp5EV9xlTU5VOYq48nMCvk1k5V_lh_A66dn8" />
+                        </div>
+                        <div class="overflow-hidden rounded-sm bg-gray-100 aspect-square">
+                            <img alt="Urban Detail 3"
+                                class="w-full h-full object-cover grayscale opacity-70 hover:opacity-100 transition-opacity"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqNezbAxrS1dJsFrOdKQBjNh__mp7WXZLk40idw0Qk3dOyj4ZE-rksS1OpqNsTm2RE4RLmshti1AKwp11cPAj30GuuiSQOCn5h0DcRjEwYKPD2AMrglFqg-7Z3pN10ZmGLEm1NSy-ZeuNsik8M135fuj2KBH8Tnv3rslvdMaBOGZFlGrygvvm7GJxyeXVDrjAUPv0WGykbQq77nTSUE-2zfKXCPKwmc0qbpN7xJsi9wgTQBdIdOU647YOwu3Mp_bxAbwmUiE7Xo58" />
+                        </div>
+                    </div>
+                </div>
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-sm bg-gray-100 aspect-video mb-4 relative">
+                        <img alt="Commercial Shoot"
+                            class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD82HF9MTvsgoKUR80OXkseFov7rEwWR45lgCs8joTKKnD4oQyC_buDKkDjS1roLj6iQiuzFRJKcrpJmN2CR3jHvMg15PZpMkZRtdsMDVvnNnCbH6ZBlXvJqQka7yBEBOxhFOMM_p6tcHHuP7-bffJI6LVCOGaYntutYmq55XbGecMm-xXmHZiCX_AHeVXzFsZwVTIGhvRv3nmZWJw1myuWJTtr-Q1IPB5EkO_Y-jdhxiZZYRHVxoK81U2lnUK8opmywyIok7W0H7M" />
+                        <div
+                            class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300 flex items-center justify-center">
+                            <span
+                                class="material-symbols-outlined text-white/80 text-4xl group-hover:opacity-0 transition-opacity duration-300">play_circle</span>
+                        </div>
+                    </div>
+                    <h4 class="text-lg font-medium text-gray-900 mb-2 group-hover:text-gray-600 transition-colors">
+                        Summit Brand Campaign</h4>
+                    <p class="text-gray-500 font-light text-sm leading-relaxed mb-4">Promotional video series for an
+                        outdoor apparel brand, shot on location in the Swiss Alps.</p>
+                    <div class="grid grid-cols-3 gap-2">
+                        <div class="overflow-hidden rounded-sm bg-gray-100 aspect-square">
+                            <img alt="Summit Detail 1"
+                                class="w-full h-full object-cover grayscale opacity-70 hover:opacity-100 transition-opacity"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqNezbAxrS1dJsFrOdKQBjNh__mp7WXZLk40idw0Qk3dOyj4ZE-rksS1OpqNsTm2RE4RLmshti1AKwp11cPAj30GuuiSQOCn5h0DcRjEwYKPD2AMrglFqg-7Z3pN10ZmGLEm1NSy-ZeuNsik8M135fuj2KBH8Tnv3rslvdMaBOGZFlGrygvvm7GJxyeXVDrjAUPv0WGykbQq77nTSUE-2zfKXCPKwmc0qbpN7xJsi9wgTQBdIdOU647YOwu3Mp_bxAbwmUiE7Xo58" />
+                        </div>
+                        <div class="overflow-hidden rounded-sm bg-gray-100 aspect-square">
+                            <img alt="Summit Detail 2"
+                                class="w-full h-full object-cover grayscale opacity-70 hover:opacity-100 transition-opacity"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBab96Kpnv7XedAQgdE2JAU62rOUIJ_ncvaAw-QtQKTLsN6S4RVVvuQqKp5akJ5jggNWH26lxURzpmYP83xvjJamSfCLwqW0k-0hdPi25Wy1ExpYvDL7uWheJ1G_qiqDcf2NEMa0vlBFDZrux_I3rTbG5KHlLSVECQ5XI-7NLfLRb09Nc_C2vP2N03US-5gHxGw5lrKurEsSxW4IJ2DH-x5H_OUU3Rm90OKYLXgC_xfgNuWgcx0hwb7n0xIpM7BCGUTpGiSfkwYo1o" />
+                        </div>
+                        <div class="overflow-hidden rounded-sm bg-gray-100 aspect-square">
+                            <img alt="Summit Detail 3"
+                                class="w-full h-full object-cover grayscale opacity-70 hover:opacity-100 transition-opacity"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUYLNCdH3cSHemi6KGj5wEUSqBD-O9eruOpLmj-GQpZQXaKIA8OGn84LYZHP3czFQ3Brbt2JCJ3zzvhTOyqZ3KuFVkRfPaqONG4znl69mCb-Z8yklbLOfDIgGDZw41U4xvb4YmvMzekdNmmx-X8tELErpaCxs_0GTwNE9ynw5a-LGbH-KIN3XujSraiIRcsQZaiXhc7SjZ_r1QqGrGaQYBvbv_QdA5GTKwzJv66u-Wp5EV9xlTU5VOYq48nMCvk1k5V_lh_A66dn8" />
+                        </div>
+                    </div>
+                </div>
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-sm bg-gray-100 aspect-video mb-4 relative">
+                        <img alt="Music Video"
+                            class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBab96Kpnv7XedAQgdE2JAU62rOUIJ_ncvaAw-QtQKTLsN6S4RVVvuQqKp5akJ5jggNWH26lxURzpmYP83xvjJamSfCLwqW0k-0hdPi25Wy1ExpYvDL7uWheJ1G_qiqDcf2NEMa0vlBFDZrux_I3rTbG5KHlLSVECQ5XI-7NLfLRb09Nc_C2vP2N03US-5gHxGw5lrKurEsSxW4IJ2DH-x5H_OUU3Rm90OKYLXgC_xfgNuWgcx0hwb7n0xIpM7BCGUTpGiSfkwYo1o" />
+                        <div
+                            class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300 flex items-center justify-center">
+                            <span
+                                class="material-symbols-outlined text-white/80 text-4xl group-hover:opacity-0 transition-opacity duration-300">play_circle</span>
+                        </div>
+                    </div>
+                    <h4 class="text-lg font-medium text-gray-900 mb-2 group-hover:text-gray-600 transition-colors">Neon
+                        Nights Music Video</h4>
+                    <p class="text-gray-500 font-light text-sm leading-relaxed mb-4">Abstract visual accompaniment for
+                        an electronic music track, utilizing experimental lighting techniques.</p>
+                    <div class="grid grid-cols-3 gap-2">
+                        <div class="overflow-hidden rounded-sm bg-gray-100 aspect-square">
+                            <img alt="Neon Detail 1"
+                                class="w-full h-full object-cover grayscale opacity-70 hover:opacity-100 transition-opacity"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUYLNCdH3cSHemi6KGj5wEUSqBD-O9eruOpLmj-GQpZQXaKIA8OGn84LYZHP3czFQ3Brbt2JCJ3zzvhTOyqZ3KuFVkRfPaqONG4znl69mCb-Z8yklbLOfDIgGDZw41U4xvb4YmvMzekdNmmx-X8tELErpaCxs_0GTwNE9ynw5a-LGbH-KIN3XujSraiIRcsQZaiXhc7SjZ_r1QqGrGaQYBvbv_QdA5GTKwzJv66u-Wp5EV9xlTU5VOYq48nMCvk1k5V_lh_A66dn8" />
+                        </div>
+                        <div class="overflow-hidden rounded-sm bg-gray-100 aspect-square">
+                            <img alt="Neon Detail 2"
+                                class="w-full h-full object-cover grayscale opacity-70 hover:opacity-100 transition-opacity"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbg3ezpseeOZqI2cSqe-c_rImvcIDzGHzKLunGzUfyWpL-vEF-lMA3VI1vccl--vXKGoq_nEAMmWPWW4W9U1whOVURVUUindnKfOK2Oi7PwQvjGJsb6e9-Cxx_Xc7qUX_lh2yIXZ9LFFLJ-PaXe5V5H2pYnI_HTWpISa4YyVLgHvoNl3a-bDiH4NmSPkAa9yS3vugFXPyS8CH_xY6k_GIc_Dv5CR7s7z4i5k2IlmVmV7A0NN-k5rUK_PG29D8Edmley4l597Fya6M" />
+                        </div>
+                        <div class="overflow-hidden rounded-sm bg-gray-100 aspect-square">
+                            <img alt="Neon Detail 3"
+                                class="w-full h-full object-cover grayscale opacity-70 hover:opacity-100 transition-opacity"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD82HF9MTvsgoKUR80OXkseFov7rEwWR45lgCs8joTKKnD4oQyC_buDKkDjS1roLj6iQiuzFRJKcrpJmN2CR3jHvMg15PZpMkZRtdsMDVvnNnCbH6ZBlXvJqQka7yBEBOxhFOMM_p6tcHHuP7-bffJI6LVCOGaYntutYmq55XbGecMm-xXmHZiCX_AHeVXzFsZwVTIGhvRv3nmZWJw1myuWJTtr-Q1IPB5EkO_Y-jdhxiZZYRHVxoK81U2lnUK8opmywyIok7W0H7M" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+    </main>
+    <footer class="border-t border-gray-100 bg-white py-12">
+        <div
+            class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-gray-400 text-sm">© 2026 Paul Côté.</p>
+            <div class="flex gap-6 text-sm text-gray-500">
+                <a class="hover:text-gray-900" href="https://www.linkedin.com/in/paulcoteweb/" target="_blank">LinkedIn</a>
+                <a class="hover:text-gray-900" href="https://github.com/paulcote" target="_blank">Github</a>
+                <a class="hover:text-gray-900" href="https://www.instagram.com/paul_at_world" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        const lightbox = GLightbox();
+    </script>
+
+</body>
+
+</html>
